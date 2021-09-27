@@ -17,5 +17,8 @@ forge 'https://forge.puppet.com'
 #  branch: 'docs_experiment'
 
 mod 'danieldreier-autosign', '0.3.0'
+mod 'puppetlabs-stdlib', '8.0.0'
+
+
 
 
