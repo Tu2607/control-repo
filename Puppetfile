@@ -18,6 +18,7 @@ forge 'https://forge.puppet.com'
 
 mod 'danieldreier-autosign', '0.3.0'
 mod 'puppetlabs-stdlib', '6.6.0'
+mod 'puppetlabs-inifile', '4.3.1'
 
 
 
