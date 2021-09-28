@@ -13,26 +13,6 @@
 # https://github.com/puppetlabs/docs-archive/blob/master/pe/2015.3/release_notes.markdown#filebucket-resource-no-longer-created-by-default
 File { backup => false }
 
-ini_setting { 'policy-based autosigning':
-  setting => 'autosign',
-  path    => "${confdir}/puppet.conf",
-  section => 'master',
-  value   => '/opt/puppetlabs/puppet/bin/autosign-validator',
-  #notify  => Service['pe-puppetserver'],
-}
-
-class { ::autosign:
-  ensure => 'latest',
-  config => {
-    'general' => {
-      'loglevel' => 'INFO',
-    },
-    'jwt_token' => {
-      'secret'   => 'Tu2',
-      'validity' => '7200',
-    }
-  },
-}
 ## Node Definitions ##
 
 # The default node definition matches any node lacking a more specific node
@@ -48,4 +28,27 @@ node default {
   # This is where you can declare classes for all nodes.
   # Example:
   #   class { 'my_class': }
+}
+
+node tu-vu-1 {
+ ini_setting { 'policy-based autosigning':
+   setting => 'autosign',
+   path    => "${confdir}/puppet.conf",
+   section => 'master',
+   value   => '/opt/puppetlabs/puppet/bin/autosign-validator',
+   notify  => Service['pe-puppetserver'],
+ }
+
+ class { ::autosign:
+   ensure => 'latest',
+   config => {
+     'general' => {
+       'loglevel' => 'INFO',
+     },
+     'jwt_token' => {
+       'secret'   => 'Tu2',
+       'validity' => '7200',
+     }
+   },
+ }
 }
