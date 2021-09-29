@@ -1,6 +1,6 @@
 class profile::server_baseline {
-  include acl  # Not sure about this yet
-  include registry  # Not sure about this yet too
+  #include acl  # Not sure about this yet
+  #include registry  # Not sure about this yet too
 
   user { 'Art Vandelay':
     ensure  => present,
@@ -21,6 +21,7 @@ class profile::server_baseline {
     ensure => 'directory',
   }  
 
+/*
   acl { 'C:/adminTools':
     target      => 'C:/adminTools',
     purge       => false,  # Read more on this 
@@ -41,4 +42,5 @@ class profile::server_baseline {
     type => dword,
     data => 0
   }
+*/
 }
