@@ -61,4 +61,5 @@ node tu-vu-linux {
 node tu-vu-windows {
   include acl
   include registry
+  include archive
 }

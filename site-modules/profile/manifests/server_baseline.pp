@@ -1,16 +1,17 @@
 class profile::server_baseline {
-  #include acl  # Not sure about this yet
-  #include registry  # Not sure about this yet too
-
   user { 'Art Vandelay':
     ensure   => present,
     comment  => 'This is the admin user',
     name     => 'Art Vandelay',
     password => 'Chicken123!',
     groups   => ['Administrators'],
-    # Still need to grant my user the 'log on as a service' 
   }
   
+  local_security_policy { 'Log on as a service':
+    ensure       => present,
+    policy_value => 'Art Vandelay',
+  }
+
   group { 'Vandelay Industries Administrators':
     ensure  => present,
     name    => 'Vandelay Industries Administrators',
@@ -21,9 +22,8 @@ class profile::server_baseline {
     ensure => 'directory',
   }  
 
-/*
-  acl { 'C:/adminTools':
-    target      => 'C:/adminTools',
+  acl { 'c:/adminTools':
+    target      => 'c:/adminTools',
     purge       => false,  # Read more on this 
     permissions => [
      { identity => 'Art Vandelay', rights => ['full'] },
@@ -32,7 +32,7 @@ class profile::server_baseline {
   }
   
   registry::value { 'IEHarden':
-    key  => 'HKLM\Software\Microsoft\Windows\CurrentVersion\InternetSettings\ZoneMap',
+    key  => 'HKLM\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap',
     type => dword,
     data => 0,
   }
@@ -42,5 +42,4 @@ class profile::server_baseline {
     type => dword,
     data => 0,
   }
-*/
 }

@@ -22,3 +22,8 @@ mod 'puppetlabs-inifile', '4.3.1'
 
 mod 'puppetlabs-acl', '4.0.0'
 mod 'puppetlabs-registry', '4.0.1'
+mod 'ayohrling-local_security_policy', '0.8.1'
+
+mod 'puppet-archive', '6.0.1'
+
+
