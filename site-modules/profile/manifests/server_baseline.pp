@@ -3,21 +3,21 @@ class profile::server_baseline {
   #include registry  # Not sure about this yet too
 
   user { 'Art Vandelay':
-    ensure  => present,
-    comment => 'This is the admin user',
-    name    => 'Art Vandelay',
-    groups  => ['Administrator'],
+    ensure   => present,
+    comment  => 'This is the admin user',
+    name     => 'Art Vandelay',
+    password => 'Chicken123!',
+    groups   => ['Administrators'],
     # Still need to grant my user the 'log on as a service' 
   }
   
   group { 'Vandelay Industries Administrators':
     ensure  => present,
     name    => 'Vandelay Industries Administrators',
-    members => ['Art Vandelay']
+    members => ['Art Vandelay'],
   }
 
-  file { 'C:/adminTools':
-    path   => 'C:/adminTools',
+  file { 'c:/adminTools':
     ensure => 'directory',
   }  
 
@@ -34,13 +34,13 @@ class profile::server_baseline {
   registry::value { 'IEHarden':
     key  => 'HKLM\Software\Microsoft\Windows\CurrentVersion\InternetSettings\ZoneMap',
     type => dword,
-    data => 0
+    data => 0,
   }
   
   registry::value { 'ShutdownReasonUI':
     key  => 'HKLM\Software\Microsoft\Windows\CurrentVersion\Reliability',
     type => dword,
-    data => 0
+    data => 0,
   }
 */
 }

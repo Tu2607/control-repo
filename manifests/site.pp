@@ -31,7 +31,6 @@ node default {
 }
 
 node tu-vu-1 {
- include acl
  ini_setting { 'policy-based autosigning':
    setting => 'autosign',
    path    => "${confdir}/puppet.conf",
@@ -56,7 +55,6 @@ node tu-vu-1 {
 
 # Just testing
 node tu-vu-linux {
-  include acl 
 }
 
 # Just testing
