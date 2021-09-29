@@ -52,3 +52,14 @@ node tu-vu-1 {
    },
  }
 }
+
+# Just testing
+node tu-vu-linux {
+
+}
+
+# Just testing
+node tu-vu-windows {
+  include acl
+  include registry
+}

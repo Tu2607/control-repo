@@ -20,6 +20,5 @@ mod 'danieldreier-autosign', '0.3.0'
 mod 'puppetlabs-stdlib', '6.6.0'
 mod 'puppetlabs-inifile', '4.3.1'
 
-
-
-
+mod 'puppetlabs-acl', '4.0.0'
+mod 'puppetlabs-registry', '4.0.1'
