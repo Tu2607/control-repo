@@ -1,27 +1,24 @@
-/*
 class profile::mobaxterm {
-  # Interesting note here: If the execution is procedural,
-  # then 'C:\adminTools exists since the user Art Vandelay is created
+  $mobaInstallerDir = 'c:\users\public\downloads'
+  $packageName = 'MobaXterm_installer_v21.3.msi' 
+  $archiveName = 'MobaXterm_Installer_v21.3.zip'
 
-  $mobaInstallerDir = 'c:\adminTools'
-  
-  # Ensure that adminTools is there
-  file { $mobeInstallerDir:
+  # Ensure that the mobaInstallerDir is there
+  file { $mobaInstallerDir:
     ensure => present,
   }
 
   # Download the MobaXterm Zip
-  archive { 'mobaTerm':
+  archive { "${mobaInstallerDir}\${archiveName}":
     ensure       => present,
     extract      => true,
     extract_path => $mobaInstallerDir,
     source       => 'https://download.mobatek.net/2132021082033134/MobaXterm_Installer_v21.3.zip', 
-    cleanup      => true,
   }
 
   # Install MobaXterm
-  package { 'mobaXterm':
-    
+  package { 'MobaXterm':
+    ensure => '21.3.0.4736',
+    source => "${mobaInstallerDir}\${packageName}",
   }
 }
-*/
