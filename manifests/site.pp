@@ -13,7 +13,9 @@
 # https://github.com/puppetlabs/docs-archive/blob/master/pe/2015.3/release_notes.markdown#filebucket-resource-no-longer-created-by-default
 File { backup => false }
 
-
+if $::kernel == 'windows' {
+  Package { provider => chocolatey, }
+}
 
 ## Node Definitions ##
 
@@ -65,5 +67,9 @@ node tu-vu-windows {
   include registry
   include archive
   include chocolatey
-  Package { provider => chocolatey, }
+
+  exec { 'install-chocolatey':
+    command => "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))",
+    provider => powershell,
+  }   
 }
