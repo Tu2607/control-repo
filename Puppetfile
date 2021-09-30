@@ -27,4 +27,6 @@ mod 'ayohrling-local_security_policy', '0.8.1'
 mod 'puppet-archive', '6.0.1'
 mod 'puppetlabs-powershell', '5.0.0'
 mod 'puppetlabs-chocolatey', '6.0.1'
+mod 'puppetlabs-pwshlib', '0.10.1'
+
 
