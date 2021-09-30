@@ -58,18 +58,11 @@ node tu-vu-1 {
 }
 
 # Just testing
-node tu-vu-linux.c.team-sse.internal {
+node 'tu-vu-linux.c.team-sse.internal' {
 }
 
 # Just testing
-node tu-vu-windows.c.team-sse.internal {
-  include acl
-  include registry
+node 'tu-vu-windows.c.team-sse.internal' {
   include archive
   include chocolatey
-
-  exec { 'install-chocolatey':
-    command => "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))",
-    provider => powershell,
-  }   
 }
