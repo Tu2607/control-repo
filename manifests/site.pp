@@ -58,11 +58,11 @@ node tu-vu-1 {
 }
 
 # Just testing
-node tu-vu-linux {
+node tu-vu-linux.c.team-sse.internal {
 }
 
 # Just testing
-node tu-vu-windows {
+node tu-vu-windows.c.team-sse.internal {
   include acl
   include registry
   include archive
