@@ -1,4 +1,5 @@
 class profile::mobaxterm {
+  /*
   $mobaInstallerDir = 'c:\users\public\downloads'
   $packageName = 'MobaXterm_installer_v21.3.msi' 
   $archiveName = 'MobaXterm_Installer_v21.3.zip'
@@ -18,7 +19,13 @@ class profile::mobaxterm {
 
   # Install MobaXterm
   package { 'MobaXterm':
-    ensure => '21.3.0.4736',
+    ensure => installed,
     source => "${mobaInstallerDir}\${packageName}",
+  }
+  */
+
+  package { 'Mobaxterm':
+    ensure   => installed,
+    provider => 'chocolatey', 
   }
 }
