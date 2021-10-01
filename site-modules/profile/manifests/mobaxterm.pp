@@ -18,7 +18,7 @@ class profile::mobaxterm {
 
   # Install MobaXterm
   package { 'MobaXterm':
-    ensure => installed,
+    ensure => present,
     source => "${mobaInstallerDir}\${packageName}",
   }
 }
