@@ -1,6 +1,6 @@
 class profile::mobaxterm {
   $mobaInstallerDir = 'c:\users\public\downloads'
-  $packageName = 'MobaXterm_installer_v21.3.msi' 
+  $packageName = 'MobaXterm_installer_21.3.msi' 
   $archiveName = 'MobaXterm_Installer_v21.3.zip'
 
   # Ensure that the mobaInstallerDir is there
@@ -9,7 +9,7 @@ class profile::mobaxterm {
   }
 
   # Download the MobaXterm Zip
-  archive { "${mobaInstallerDir}\${archiveName}":
+  archive { "${mobaInstallerDir}\\${archiveName}":
     ensure       => present,
     extract      => true,
     extract_path => $mobaInstallerDir,
@@ -19,6 +19,6 @@ class profile::mobaxterm {
   # Install MobaXterm
   package { 'MobaXterm':
     ensure => present,
-    source => "${mobaInstallerDir}\${packageName}",
+    source => "${mobaInstallerDir}\\${packageName}",
   }
 }
