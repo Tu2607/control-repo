@@ -30,5 +30,5 @@ mod 'puppetlabs-chocolatey', '6.0.1'
 mod 'puppetlabs-pwshlib', '0.10.1'
 
 mod 'puppetlabs-iis', '8.0.3'
-
+mod 'puppetlabs-reboot', '4.1.0'
 
