@@ -16,19 +16,19 @@ forge 'https://forge.puppet.com'
 #  git:    'https://github.com/puppetlabs/puppetlabs-apache',
 #  branch: 'docs_experiment'
 
-mod 'danieldreier-autosign', '0.3.0'
+#mod 'danieldreier-autosign', '0.3.0'
 mod 'puppetlabs-stdlib', '6.6.0'
-mod 'puppetlabs-inifile', '4.3.1'
+#mod 'puppetlabs-inifile', '4.3.1'
 
-mod 'puppetlabs-acl', '4.0.0'
-mod 'puppetlabs-registry', '4.0.1'
-mod 'ayohrling-local_security_policy', '0.8.1'
+#mod 'puppetlabs-acl', '4.0.0'
+#mod 'puppetlabs-registry', '4.0.1'
+#mod 'ayohrling-local_security_policy', '0.8.1'
 
-mod 'puppet-archive', '6.0.1'
-mod 'puppetlabs-powershell', '5.0.0'
-mod 'puppetlabs-chocolatey', '6.0.1'
-mod 'puppetlabs-pwshlib', '0.10.1'
+#mod 'puppet-archive', '6.0.1'
+#mod 'puppetlabs-powershell', '5.0.0'
+#mod 'puppetlabs-chocolatey', '6.0.1'
+#mod 'puppetlabs-pwshlib', '0.10.1'
 
-mod 'puppetlabs-iis', '8.0.3'
-mod 'puppetlabs-reboot', '4.1.0'
+#mod 'puppetlabs-iis', '8.0.3'
+#mod 'puppetlabs-reboot', '4.1.0'
 
