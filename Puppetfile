@@ -32,3 +32,16 @@ mod 'puppetlabs-pwshlib', '0.10.1'
 mod 'puppetlabs-iis', '8.0.3'
 mod 'puppetlabs-reboot', '4.1.0'
 
+mod 'puppetlabs-concat', '6.4.0'
+mod 'puppetlabs-puppet_agent', '4.0.0'
+mod 'puppetlabs-mount_providers', '2.0.1'
+mod 'puppetlabs-augeas_core', '1.1.1'
+mod 'puppetlabs-firewall', '2.8.1'
+mod 'puppet-firewalld', '4.4.0'
+mod 'puppet-logrotate', '5.0.0'
+mod 'puppet-selinux', '3.2.0'
+mod 'camptocamp-systemd', '2.10.0'
+
+mod 'puppetlabs-cem_linux',
+  git:    'https://github.com/puppetlabs/puppetlabs-cem_linux.git',
+  branch: 'main'
